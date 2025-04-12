@@ -45,12 +45,14 @@ Check out the live site: [https://portfolio-thathaji.vercel.app/](https://portfo
 To run this project locally:
 
 ```bash
-git clone https://github.com/thathaji/your-portfolio.git
-cd your-portfolio
+git clone https://github.com/Thathaji9/react-portfolio-thathaji.git
+cd react-portfolio-thathaji
 npm install
 npm start
+```
+
+---
 
 ## 🙏 Credits
 
 This portfolio is based on the awesome open-source template by [Stoman](https://github.com/realstoman), customized and extended by **Thathaji Rallapalli** for personal use.
-```
