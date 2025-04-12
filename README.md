@@ -36,7 +36,7 @@ It highlights my work as a frontend developer, including my experience, tech sta
 
 ![Portfolio Preview](./public/preview.png)
 
-Check out the live site: [https://your-portfolio.vercel.app](https://your-portfolio.vercel.app)
+Check out the live site: [https://portfolio-thathaji.vercel.app/](https://portfolio-thathaji.vercel.app/)
 
 ---
 
