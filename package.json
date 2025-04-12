@@ -18,12 +18,12 @@
     "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1"
   },
-"scripts": {
-  "start": "react-scripts start",
-  "build": "GENERATE_SOURCEMAP=false react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
-},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -49,6 +49,7 @@
     "autoprefixer": "^10.4.7",
     "babel-preset-react-app": "^10.1.0",
     "eslint": "7.32.0",
+    "eslint-config-react-app": "^7.0.1",
     "postcss": "^8.4.21",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.0.24"
