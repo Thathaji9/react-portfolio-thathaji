@@ -9,11 +9,11 @@ It highlights my work as a frontend developer, including my experience, tech sta
 
 - React 18
 - TypeScript
+- JavaScript
 - Tailwind CSS 3
 - React Router
-- Redux Toolkit
+- Redux State Management
 - Material UI (MUI)
-- Framer Motion
 - React Hook Form
 - Recharts / D3.js
 
