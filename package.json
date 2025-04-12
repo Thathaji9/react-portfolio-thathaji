@@ -18,14 +18,12 @@
     "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1"
   },
-  "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build:css": "postcss src/css/tailwind.css -o src/css/main.css",
-    "format": "prettier --write ."
-  },
+"scripts": {
+  "start": "react-scripts start",
+  "build": "GENERATE_SOURCEMAP=false react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
