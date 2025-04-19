@@ -4,6 +4,7 @@ import ProjectSingle from './ProjectSingle';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectsFilter from './ProjectsFilter';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
+import SingleProjectContext from '../../context/SingleProjectContext';
 
 const ProjectsGrid = () => {
   const {
@@ -24,18 +25,7 @@ const ProjectsGrid = () => {
         </p>
       </div>
 
-      {/* <div className="mt-10 sm:mt-16">
-				<h3
-					className="font-general-regular 
-                        text-center text-secondary-dark
-                        dark:text-ternary-light
-                        text-md
-                        sm:text-xl
-                        mb-3
-                        "
-				>
-					Search projects by title or filter by category
-				</h3>
+      <div className="mt-10 sm:mt-16">
 				<div
 					className="
                         flex
@@ -90,11 +80,11 @@ const ProjectsGrid = () => {
 						/>
 					</div>
 
-					<ProjectsFilter setSelectProject={setSelectProject} />
+					{/* <ProjectsFilter setSelectProject={setSelectProject} /> */}
 				</div>
-			</div> */}
+			</div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10" onClick={(e) => console.log(e.currentTarget)}>
         {selectProject
           ? selectProjectsByCategory.map((project) => (
               <ProjectSingle
