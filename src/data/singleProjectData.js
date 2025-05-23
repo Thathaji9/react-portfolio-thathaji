@@ -4,6 +4,9 @@ import Image2 from '../images/light-image2.jpeg';
 import Image3 from '../images/light-image3.jpeg';
 import Image4 from '../images/dynamic-table.png';
 import Image5 from '../images/radar-graph.png';
+import Image6 from '../images/dashboard-builder.png';
+import Image7 from '../images/dashboard-builder2.png';
+import Image8 from '../images/dashboard-builder3.png';
 
 export const singleProjectData = [
   {
@@ -195,6 +198,11 @@ export const singleProjectData = [
           title: 'Tech Stack',
           details: 'React, TypeScript, TailwindCSS, SVG, Context API',
         },
+        {
+          id: 3,
+          title: 'Live Demo',
+          details: 'https://custom-radar-chart.vercel.app/',
+        }
       ],
       ObjectivesHeading: 'Goal',
       ObjectivesDetails:
@@ -235,4 +243,92 @@ export const singleProjectData = [
       ],
     },
   },
+  {
+      ProjectHeader: {
+      mainTitle: 'Dynamic Dashboard Builder',
+      title: 'Interactive Dashboard with React Grid Layout & Data Persistence',
+      publishDate: 'May 2025',
+      tags: 'React.js, TypeScript, React Grid Layout, Recharts, D3.js, LocalStorage',
+    },
+    ProjectImages: [
+      { id: 1, title: 'Dashboard Overview', img: Image6 },
+      { id: 2, title: 'Widget Configuration Modal', img: Image7 },
+      { id: 3, title: 'Table Widget Data Entry', img: Image8 },
+    ],
+    ProjectInfo: {
+      ClientHeading: 'Project Details',
+      CompanyInfo: [
+        {
+          id: 1,
+          title: 'Repository',
+          details: 'https://github.com/Thathaji9/react-dashboard-builder',
+        },
+        {
+          id: 2,
+          title: 'Live Demo',
+          details: 'https://react-dashboard-builder.vercel.app/',
+        },
+        {
+          id: 3,
+          title: 'Tech Stack',
+          details: 'React.js, TypeScript, React Grid Layout, Recharts, D3.js, Vite',
+        },
+      ],
+      ObjectivesHeading: 'Project Goals',
+      ObjectivesDetails:
+        'To build a highly dynamic, user-configurable dashboard application demonstrating advanced React concepts, flexible UI design, interactive data visualization, and robust client-side data persistence. The primary aim was to create a reusable and extendable platform for visualizing diverse datasets.',
+      Technologies: [
+        {
+          title: 'Core Technologies',
+          techs: ['React.js', 'TypeScript', 'React Grid Layout', 'Vite'],
+        },
+        {
+          title: 'Data Visualization',
+          techs: ['Recharts', 'D3.js (for custom visuals)'],
+        },
+        {
+          title: 'UI/UX & State Management',
+          techs: ['Local Storage (Persistence)', 'Modular CSS (Components)', 'Responsive Design'],
+        },
+      ],
+      ProjectDetailsHeading: 'Implementation Highlights',
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            'Implemented a robust drag-and-drop dashboard layout using `react-grid-layout`, enabling users to freely add, resize, and rearrange widgets across a responsive grid system.',
+        },
+        {
+          id: 2,
+          details:
+            'Developed multiple distinct widget types (Text, Chart, Table, D3.js custom) with dynamic content rendering, showcasing versatility in UI component design.',
+        },
+        {
+          id: 3,
+          details:
+            'Designed and integrated a generic `WidgetConfigModal` that dynamically renders configuration fields based on widget type, incorporating real-time input validation for data integrity.',
+        },
+        {
+          id: 4,
+          details:
+            'Managed complex dashboard state, including widget positions, dimensions, and unique data, with seamless persistence to and retrieval from `localStorage` for cross-session continuity.',
+        },
+        {
+          id: 5,
+          details:
+            'Integrated `Recharts` for creating interactive Bar, Line, and Pie charts with customizable datasets and titles, and `D3.js` for building a bespoke interactive visualization (e.g., dynamic circle) to demonstrate low-level graphic control.',
+        },
+        {
+          id: 6,
+          details:
+            'Ensured a clean and maintainable codebase by using TypeScript for strong typing across all components and state management, significantly reducing runtime errors.',
+        },
+        {
+          id: 7,
+          details:
+            'Enhanced user experience through intuitive UI elements such as clear edit/remove buttons, a dedicated drag handle, and informative messages for an empty dashboard state.',
+        },
+      ],
+    },
+  }
 ];

@@ -2,6 +2,7 @@
 import Image1 from '../images/web-light1.jpeg';
 import Image2 from '../images/dynamic-table.png';
 import Image3 from '../images/radar-graph.png';
+import Image4 from '../images/dashboard-builder.png';
 
 export const projectsData = [
   {
@@ -41,4 +42,17 @@ export const projectsData = [
     description:
     'A reusable and fully dynamic radar chart built using React, SVG, and Context API. It supports dynamic axes, dark/light theme switching, and interactivity without relying on chart libraries.',
   },
+  {
+    id: 4,
+    title: 'Dynamic Dashboard Builder',
+    category: 'Data Visualization & UI/UX',
+    img: Image4,
+    ProjectHeader: {
+      title: 'Dynamic Dashboard Builder - React & RGL',
+      publishDate: 'May 2025',
+      tags: 'React.js / TypeScript / React Grid Layout / Recharts / D3.js / LocalStorage',
+    },
+    description:
+      'A robust and interactive web application for building custom dashboards. Users can drag-and-drop various widget types (Text, Chart, Table, D3.js custom viz) onto a responsive grid, resize them, and configure their content through dedicated modals. Features include real-time input validation, automatic persistence of layout and data to LocalStorage, and a highly intuitive user experience.',
+},
 ];
