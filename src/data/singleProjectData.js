@@ -7,6 +7,9 @@ import Image5 from '../images/radar-graph.png';
 import Image6 from '../images/dashboard-builder.png';
 import Image7 from '../images/dashboard-builder2.png';
 import Image8 from '../images/dashboard-builder3.png';
+import Image9 from '../images/insightsAi1.png';
+import Image10 from '../images/insightsAi2.png';
+import Image11 from '../images/insightsAi3.png';
 
 export const singleProjectData = [
   {
@@ -202,7 +205,7 @@ export const singleProjectData = [
           id: 3,
           title: 'Live Demo',
           details: 'https://custom-radar-chart.vercel.app/',
-        }
+        },
       ],
       ObjectivesHeading: 'Goal',
       ObjectivesDetails:
@@ -244,7 +247,7 @@ export const singleProjectData = [
     },
   },
   {
-      ProjectHeader: {
+    ProjectHeader: {
       mainTitle: 'Dynamic Dashboard Builder',
       title: 'Interactive Dashboard with React Grid Layout & Data Persistence',
       publishDate: 'May 2025',
@@ -271,7 +274,8 @@ export const singleProjectData = [
         {
           id: 3,
           title: 'Tech Stack',
-          details: 'React.js, TypeScript, React Grid Layout, Recharts, D3.js, Vite',
+          details:
+            'React.js, TypeScript, React Grid Layout, Recharts, D3.js, Vite',
         },
       ],
       ObjectivesHeading: 'Project Goals',
@@ -288,7 +292,11 @@ export const singleProjectData = [
         },
         {
           title: 'UI/UX & State Management',
-          techs: ['Local Storage (Persistence)', 'Modular CSS (Components)', 'Responsive Design'],
+          techs: [
+            'Local Storage (Persistence)',
+            'Modular CSS (Components)',
+            'Responsive Design',
+          ],
         },
       ],
       ProjectDetailsHeading: 'Implementation Highlights',
@@ -330,5 +338,135 @@ export const singleProjectData = [
         },
       ],
     },
-  }
+  },
+  {
+    ProjectHeader: {
+      mainTitle: 'InsightFlow AI - Data Storyteller',
+      title: 'AI-Powered Data Storyteller & Dynamic Dashboard',
+      publishDate: 'May 2025',
+      tags: 
+        'Next.js, React.js, TypeScript, Tailwind CSS, React Grid Layout, Recharts, D3.js, LocalStorage, AI Integration (e.g., Google Gemini API)',
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: 'Dashboard Overview',
+        img: Image9,
+      },
+      {
+        id: 2,
+        title: 'AI Insights & Chart Suggestions',
+        img: Image10,
+      },
+      {
+        id: 3,
+        title: 'Widget Configuration Modal',
+        img: Image11,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: 'Project Details',
+      CompanyInfo: [
+        {
+          id: 1,
+          title: 'Repository',
+          details: 'https://github.com/Thathaji9/insightflow-ai',
+        },
+        {
+          id: 2,
+          title: 'Live Demo',
+          details: 'https://insightflow-ai.vercel.app/',
+        },
+        {
+          id: 3,
+          title: 'Tech Stack',
+          details:
+            'Next.js, React.js, TypeScript, Tailwind CSS, React Grid Layout, Recharts, D3.js, AI (LLM)',
+        },
+      ],
+      ObjectivesHeading: 'Project Goals & AI Vision',
+      ObjectivesDetails:
+        'To revolutionize data analysis by providing an AI-powered platform for effortless data storytelling and dynamic dashboard creation. The primary objective was to build a highly intuitive, user-configurable web application that not only visualizes data but also provides intelligent insights, transforming raw information into actionable narratives. This project aims to demonstrate advanced React concepts, flexible UI/UX design, cutting-edge AI integration for data interpretation, and robust client-side data persistence, all within a scalable and extendable architecture.',
+      Technologies: [
+        {
+          title: 'Core Application Stack',
+          techs: [
+            'Next.js',
+            'React.js',
+            'TypeScript',
+            'Tailwind CSS',
+            'Vite (if used for parts of build)',
+          ],
+        },
+        {
+          title: 'Dashboard & UI/UX',
+          techs: [
+            'React Grid Layout (Drag & Drop)',
+            'Local Storage (Persistence)',
+            'Responsive Design',
+            'Modular CSS (Components)',
+          ],
+        },
+        {
+          title: 'Data Processing & Visualization',
+          techs: [
+            'papaparse (CSV)',
+            'Native JSON',
+            'Recharts (Charts)',
+            'D3.js (Custom Visuals)',
+          ],
+        },
+        {
+          title: 'Artificial Intelligence',
+          techs: [
+            'LLM Integration (e.g., Google Gemini API, OpenAI API)',
+            'Data Interpretation Algorithms',
+          ],
+        },
+      ],
+      ProjectDetailsHeading: 'Implementation Highlights & AI Integration',
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            'Developed an innovative AI integration layer capable of ingesting uploaded CSV/JSON data, performing semantic analysis, and generating intelligent insights along with recommended chart types and data fields for visualization.',
+        },
+        {
+          id: 2,
+          details:
+            'Implemented a robust drag-and-drop dashboard layout using `react-grid-layout`, enabling users to freely add, resize, and rearrange AI-suggested or custom widgets across a responsive grid system.',
+        },
+        {
+          id: 3,
+          details:
+            'Developed multiple distinct widget types (Text, AI-Generated Chart, Custom Chart, Table, D3.js custom viz) with dynamic content rendering, showcasing versatility in UI component design driven by both user input and AI suggestions.',
+        },
+        {
+          id: 4,
+          details:
+            'Designed and integrated a versatile `WidgetConfigModal` that dynamically renders configuration fields based on widget type, incorporating real-time input validation for data integrity and user-friendly customization.',
+        },
+        {
+          id: 5,
+          details:
+            'Managed complex dashboard state, including AI-generated insights, widget positions, dimensions, and unique data, with seamless persistence to and retrieval from `localStorage` for cross-session continuity and an uninterrupted user workflow.',
+        },
+        {
+          id: 6,
+          details:
+            'Integrated `Recharts` for creating interactive Bar, Line, and Pie charts with customizable datasets and titles (often pre-filled by AI suggestions), and `D3.js` for building bespoke interactive visualizations to demonstrate low-level graphic control and unique data storytelling.',
+        },
+        {
+          id: 7,
+          details:
+            'Ensured a clean, scalable, and maintainable codebase using TypeScript for strong typing across all components, state management, and AI integration logic, significantly reducing runtime errors and improving developer experience.',
+        },
+        {
+          id: 8,
+          details:
+            'Enhanced user experience through intuitive UI elements such as clear edit/remove buttons, a dedicated drag handle, informative messages for an empty dashboard state, and clear visual feedback for AI processing.',
+        },
+      ],
+    },
+  },
 ];

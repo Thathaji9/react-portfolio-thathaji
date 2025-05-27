@@ -3,6 +3,7 @@ import Image1 from '../images/web-light1.jpeg';
 import Image2 from '../images/dynamic-table.png';
 import Image3 from '../images/radar-graph.png';
 import Image4 from '../images/dashboard-builder.png';
+import Image5 from '../images/insightsAi1.png';
 
 export const projectsData = [
   {
@@ -27,7 +28,8 @@ export const projectsData = [
       publishDate: 'Aprtil 2025',
       tags: 'UI / Frontend',
     },
-    description: 'A reusable, client-side table built with React & TypeScript featuring search with debounce, role-based filtering, and pagination — optimized for performance with memoization techniques.'
+    description:
+      'A reusable, client-side table built with React & TypeScript featuring search with debounce, role-based filtering, and pagination — optimized for performance with memoization techniques.',
   },
   {
     id: 3,
@@ -40,7 +42,7 @@ export const projectsData = [
       tags: 'Data Visualization / UI Component',
     },
     description:
-    'A reusable and fully dynamic radar chart built using React, SVG, and Context API. It supports dynamic axes, dark/light theme switching, and interactivity without relying on chart libraries.',
+      'A reusable and fully dynamic radar chart built using React, SVG, and Context API. It supports dynamic axes, dark/light theme switching, and interactivity without relying on chart libraries.',
   },
   {
     id: 4,
@@ -54,5 +56,20 @@ export const projectsData = [
     },
     description:
       'A robust and interactive web application for building custom dashboards. Users can drag-and-drop various widget types (Text, Chart, Table, D3.js custom viz) onto a responsive grid, resize them, and configure their content through dedicated modals. Features include real-time input validation, automatic persistence of layout and data to LocalStorage, and a highly intuitive user experience.',
-},
+  },
+  {
+    id: 5,
+    title: 'InsightFlow AI - Data Storyteller',
+    category: 'Data Analysis & UI/UX',
+    img: Image5,
+    ProjectHeader: {
+      title: 'InsightFlow AI: AI-Powered Dashboard Builder',
+      publishDate: 'May 2025',
+      tags: 
+        'Next.js / React.js / TypeScript / Tailwind CSS / React Grid Layout / Recharts / D3.js / LocalStorage / AI Integration (Specify API, e.g., Gemini API)'
+      
+    },
+    description:
+      'An innovative, AI-powered web application designed to transform raw data into compelling stories and interactive dashboards. It simplifies data analysis, making sophisticated insights accessible to everyone. Users can upload CSV/JSON data, leverage AI for automatic analysis and visualization suggestions, and build dynamic dashboards with drag-and-drop, resizable widgets (Charts, Tables, Text, D3.js custom visualizations). Features include real-time input validation and automatic persistence of layout and data to LocalStorage for a seamless user experience.',
+  },
 ];
