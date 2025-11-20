@@ -448,7 +448,7 @@ export const singleProjectData = [
     ProjectHeader: {
       mainTitle: 'Custom Report Service',
       title: 'Custom Reporting & Scheduler Platform',
-      publishDate: 'Jan 2025',
+      publishDate: 'Nov 2025',
       tags: 'Full Stack / Automation / Reporting'
     },
 
