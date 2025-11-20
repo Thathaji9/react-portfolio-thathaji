@@ -487,12 +487,17 @@ export const singleProjectData = [
           id: 3,
           title: 'Repository',
           details: 'https://github.com/Thathaji9/custom-report-service'
-        }
+        },
+        {
+          id: 3,
+          title: 'Live Demo',
+          details: 'https://custom-report-service.vercel.app/dashboard/new',
+        },
       ],
 
       ObjectivesHeading: 'Objective',
       ObjectivesDetails:
-        'To build a full-stack system capable of generating dynamic reports, exporting them as PDFs, scheduling recurring jobs, and delivering automated email notifications — along with a React dashboard for visualizing and managing data.',
+        'To build a full-stack system capable of generating dynamic reports, exporting them as PDFs, and scheduling recurring jobs — along with a React dashboard for visualizing and managing data.',
 
       Technologies: [
         {
