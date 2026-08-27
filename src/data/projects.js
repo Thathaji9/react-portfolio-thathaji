@@ -31,7 +31,7 @@ export const projectsData = [
     title: 'CheckRed Security Platform',
     category: 'Product UI',
     featured: true,
-    year: '2023 — Present',
+    year: '2023 — 2025',
     img: checkredCard,
     images: [
       { id: 1, title: 'CheckRed product UI', img: checkred1 },

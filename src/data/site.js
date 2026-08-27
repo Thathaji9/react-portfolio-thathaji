@@ -1,11 +1,11 @@
 export const site = {
   name: 'Thathaji Rallapalli',
   firstName: 'Thathaji',
-  role: 'Frontend Engineer',
+  role: 'Software Engineer, UI',
   headline: 'I turn complex systems into interfaces people can actually use.',
   subhead:
-    'Schema-driven UIs, data-heavy dashboards, and AI-assisted products — designed and engineered with React, TypeScript, and a lot of craft.',
-  availability: 'Open to thoughtful frontend roles and product collaborations',
+    'Currently at Clearwater, building Angular UI in an Nx monorepo — plus a body of React work in schema-driven dashboards, visualization, and AI-assisted products.',
+  availability: 'Software Engineer, UI at Clearwater · Dec 2025 — Present',
   location: 'Pune, Maharashtra, India',
   email: 'thathaji.rallapalli9@gmail.com',
   phone: '+91 7659025931',
@@ -22,10 +22,11 @@ export const site = {
     { id: 'hashnode', label: 'Hashnode', url: 'https://hashnode.com/@thathaji9' },
   ],
   rotating: [
+    'Angular + Nx monorepos',
+    'TanStack Table',
     'schema-driven UIs',
     'security dashboards',
     'data visualization',
     'AI-assisted products',
-    'report platforms',
   ],
 };

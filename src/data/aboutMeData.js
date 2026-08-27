@@ -5,10 +5,10 @@ export const aboutMeData = [
   },
   {
     id: 2,
-    bio: `At CheckRed I help shape the cloud and DNS security platform — DNS Posture, DNS Inventory, and the schema-driven rendering layer that lets screens assemble themselves from backend metadata. Around that, I run a personal lab of dashboards, custom charts, reporting engines, and AI storytelling tools.`,
+    bio: `I'm currently a Software Engineer, UI at Clearwater (since December 2025), working in an Angular + Nx monorepo with TanStack Table for dense, production-grade data views. Before that I spent nearly three years at CheckRed shaping the cloud and DNS security platform — DNS Posture, DNS Inventory, and a schema-driven rendering layer that lets screens assemble themselves from backend metadata.`,
   },
   {
     id: 3,
-    bio: `I write about the patterns I actually use — metadata-based UI, OTP autofill, and the craft of making complex products feel simple. When I'm not in a React tree, I'm sharpening algorithms on NeetCode and looking for teams that treat frontend as product, not decoration.`,
+    bio: `Around the day job I run a personal lab of dashboards, custom charts, reporting engines, and AI storytelling tools. I write about the patterns I actually use — metadata-based UI, OTP autofill, and the craft of making complex products feel simple.`,
   },
 ];

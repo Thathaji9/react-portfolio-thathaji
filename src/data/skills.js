@@ -2,12 +2,21 @@ export const skillGroups = [
   {
     id: 'interface',
     title: 'Interface',
-    items: ['React', 'TypeScript', 'JavaScript (ES6+)', 'Next.js', 'HTML5', 'CSS3'],
+    items: ['Angular', 'React', 'TypeScript', 'JavaScript (ES6+)', 'Next.js', 'HTML5', 'CSS3'],
   },
   {
     id: 'state',
     title: 'State & data',
-    items: ['Redux Toolkit', 'Redux-Saga', 'Context API', 'React Hook Form', 'REST APIs'],
+    items: [
+      'TanStack Table',
+      'Nx',
+      'Monorepos',
+      'Redux Toolkit',
+      'Redux-Saga',
+      'Context API',
+      'React Hook Form',
+      'REST APIs',
+    ],
   },
   {
     id: 'design',
@@ -34,27 +43,31 @@ export const skillGroups = [
 export const capabilities = [
   {
     id: '01',
-    title: 'Schema-driven product UI',
-    body: 'Dynamic rendering from JSON metadata so one engine can power many tenant-specific screens — the pattern behind CheckRed’s DNS modules.',
+    title: 'Monorepo product UI',
+    body: 'Angular applications in an Nx workspace — shared libraries, consistent theming, and features that land without breaking the rest of the graph. This is the day job at Clearwater.',
   },
   {
     id: '02',
-    title: 'Dashboards people rearrange',
-    body: 'Drag-and-drop grids, typed widget configs, and persistence. From React Grid Layout to AI-suggested charts that still feel editable.',
+    title: 'Tables that carry the product',
+    body: 'TanStack Table for dense, typed, filterable datasets. Column defs, row models, and interactions designed for people who live in the grid all day.',
   },
   {
     id: '03',
-    title: 'Charts without the black box',
-    body: 'Recharts and D3 when they earn their place, custom SVG when they don’t. Radar, tables, and operational visuals built for real data.',
+    title: 'Schema-driven screens',
+    body: 'Dynamic rendering from JSON metadata so one engine can power many tenant-specific views — the pattern behind CheckRed’s DNS modules.',
   },
   {
     id: '04',
-    title: 'Reporting that runs itself',
-    body: 'Schedulers, PDF export, and email delivery wrapped in a React control plane — the Custom Report Service end to end.',
+    title: 'Dashboards, charts, reports',
+    body: 'Drag-and-drop grids, custom SVG, Recharts, D3, and a full-stack reporting pipeline with PDF and cron. The lab around the day job.',
   },
 ];
 
 export const techMarquee = [
+  'Angular',
+  'Nx',
+  'TanStack Table',
+  'Monorepos',
   'React',
   'TypeScript',
   'Redux Toolkit',
@@ -66,7 +79,5 @@ export const techMarquee = [
   'Node.js',
   'Express',
   'React Hook Form',
-  'Framer Motion',
-  'Vite',
   'Jest',
 ];

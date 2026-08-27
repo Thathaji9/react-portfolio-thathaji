@@ -1,6 +1,6 @@
-# Thathaji Rallapalli — Frontend Engineer
+# Thathaji Rallapalli — Software Engineer, UI
 
-Personal portfolio for **Thathaji Rallapalli**: production UI for security platforms, plus a lab of dashboards, custom visualization, reporting, and AI-assisted products.
+Personal portfolio for **Thathaji Rallapalli**. Currently a Software Engineer, UI at **Clearwater**, building Angular interfaces in an Nx monorepo with TanStack Table — plus a lab of React dashboards, visualization, reporting, and AI-assisted products.
 
 Live: [https://portfolio-thathaji.vercel.app/](https://portfolio-thathaji.vercel.app/)
 
@@ -8,9 +8,9 @@ Live: [https://portfolio-thathaji.vercel.app/](https://portfolio-thathaji.vercel
 
 ## What’s here
 
-- Custom visual system (warm paper / obsidian, Syne + Outfit) — not a generic template restyle
+- Custom visual system (warm paper / obsidian, Syne + Outfit)
 - Case studies with slug URLs, live demos, and source links
-- Experience, capabilities, writing, and a working contact form
+- Experience at Clearwater and CheckRed, capabilities, writing, and a contact form
 - Light and dark themes, searchable / filterable work
 
 ### Featured work
