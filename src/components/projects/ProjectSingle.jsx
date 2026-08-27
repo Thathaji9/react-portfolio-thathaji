@@ -6,10 +6,9 @@ import ProjectCover from './ProjectCover';
 const ProjectSingle = ({ project, featured = false }) => {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
       className={featured ? 'md:col-span-2' : ''}
     >
       <Link
@@ -17,16 +16,19 @@ const ProjectSingle = ({ project, featured = false }) => {
         className="project-card card-surface group block h-full"
         aria-label={`${project.title} case study`}
       >
-        <div className={`overflow-hidden ${featured ? 'aspect-[16/8]' : 'aspect-[16/10]'}`}>
+        <div
+          className={`overflow-hidden bg-elevated ${
+            featured ? 'aspect-[16/8] min-h-[220px]' : 'aspect-[16/10] min-h-[180px]'
+          }`}
+        >
           {project.img ? (
             <img
               src={project.img}
               alt={project.title}
               className="h-full w-full object-cover object-top"
-              loading="lazy"
             />
           ) : (
-            <ProjectCover cover={project.cover} title={project.title} className="h-full" />
+            <ProjectCover cover={project.cover} title={project.title} className="h-full min-h-[180px]" />
           )}
         </div>
         <div className="p-5 sm:p-6">
