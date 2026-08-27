@@ -1,14 +1,14 @@
 export const aboutMeData = [
   {
     id: 1,
-    bio: `I'm Thathaji Rallapalli, a frontend developer with nearly 3 years of professional experience building clean, efficient, and scalable user interfaces. My core expertise lies in React, TypeScript, JavaScript (ES6+), Redux Toolkit, and UI libraries like Material UI. Currently, I’m working at CheckRed India Pvt. Ltd., where I’ve contributed to complex modules such as DNS Posture and DNS Inventory — including building dynamic rendering systems using JSON-driven schemas.`,
+    bio: `I'm Thathaji Rallapalli, a frontend engineer with 3+ years building production interfaces for security, data, and AI-assisted products. I care about the unglamorous parts that make software feel inevitable: typed contracts, reusable primitives, and UI that still holds up when the dataset is huge.`,
   },
   {
     id: 2,
-    bio: 'I enjoy building reusable component libraries, simplifying large UI structures, and implementing performance techniques like memoization, debouncing, and lazy loading to make applications smoother and more efficient.',
+    bio: `At CheckRed I help shape the cloud and DNS security platform — DNS Posture, DNS Inventory, and the schema-driven rendering layer that lets screens assemble themselves from backend metadata. Around that, I run a personal lab of dashboards, custom charts, reporting engines, and AI storytelling tools.`,
   },
   {
-    id: 4,
-    bio: `I'm always eager to take on meaningful challenges, contribute to product-driven teams, and continue growing as a frontend engineer.`,
+    id: 3,
+    bio: `I write about the patterns I actually use — metadata-based UI, OTP autofill, and the craft of making complex products feel simple. When I'm not in a React tree, I'm sharpening algorithms on NeetCode and looking for teams that treat frontend as product, not decoration.`,
   },
 ];

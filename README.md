@@ -1,58 +1,44 @@
-# Thathaji Rallapalli – Frontend Developer Portfolio
+# Thathaji Rallapalli — Frontend Engineer
 
-Welcome to my personal portfolio website built with **React**, **Tailwind CSS**, and **Framer Motion**.  
-It highlights my work as a frontend developer, including my experience, tech stack, selected projects, and blog. The goal is to showcase not just my technical skills, but also my passion for clean design and scalable UI development.
+Personal portfolio for **Thathaji Rallapalli**: production UI for security platforms, plus a lab of dashboards, custom visualization, reporting, and AI-assisted products.
 
----
-
-## 🚀 Tech Stack
-
-- React 18
-- TypeScript
-- JavaScript
-- Tailwind CSS 3
-- React Router
-- Redux State Management
-- Material UI (MUI)
-- React Hook Form
-- Recharts / D3.js
+Live: [https://portfolio-thathaji.vercel.app/](https://portfolio-thathaji.vercel.app/)
 
 ---
 
-## 📁 Features
+## What’s here
 
-- Modern, mobile-friendly layout with smooth transitions
-- Modular project and experience sections
-- Dynamic UI rendered from configuration files
-- Blog section integrated with [Hashnode](https://otp-autofill-tech.hashnode.dev/)
-- Resume download and contact form
-- Easy to customize and extend
+- Custom visual system (warm paper / obsidian, Syne + Outfit) — not a generic template restyle
+- Case studies with slug URLs, live demos, and source links
+- Experience, capabilities, writing, and a working contact form
+- Light and dark themes, searchable / filterable work
+
+### Featured work
+
+- **CheckRed Security Platform** — schema-driven DNS Posture & Inventory UI
+- **InsightFlow AI** — LLM-assisted dashboard storytelling
+- **Custom Report Service** — React + Node reporting, PDF, and scheduling
+- **Dynamic Dashboard Builder** — drag-and-drop widgets with persistence
+- **Custom Radar Chart** — SVG radar without a chart library
+- **Dynamic Table** — search, filter, pagination, memoization
+- **Weather Dashboard** — OpenWeatherMap + glass UI
+- **Interactive Mood Journal** — mood log paired with live weather
+
+Writing: [Metadata-based rendering](https://modern-dashboard-rendering.hashnode.dev/metadata-based-rendering-for-modern-ui) · [Web OTP autofill](https://otp-autofill-tech.hashnode.dev/reading-otps-automatically-in-web)
 
 ---
 
-## 📸 Preview
+## Stack
 
-> ## 📸 Preview
-
-![Portfolio Preview](./public/preview.png)
-
-Check out the live site: [https://portfolio-thathaji.vercel.app/](https://portfolio-thathaji.vercel.app/)
+React 18 · Tailwind CSS 3 · Framer Motion · React Router
 
 ---
 
-## 🔧 Getting Started
-
-To run this project locally:
+## Local
 
 ```bash
 git clone https://github.com/Thathaji9/react-portfolio-thathaji.git
 cd react-portfolio-thathaji
-npm install
-npm start
+yarn
+yarn start
 ```
-
----
-
-## 🙏 Credits
-
-This portfolio is based on the awesome open-source template by [Stoman](https://github.com/realstoman), customized and extended by **Thathaji Rallapalli** for personal use.

@@ -1,38 +1,53 @@
 import { motion } from 'framer-motion';
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiArrowUpRight } from 'react-icons/fi';
+import ProjectCover from './ProjectCover';
 
-const ProjectSingle = ({ title, category, image }) => {
+const ProjectSingle = ({ project, featured = false }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, delay: 1 }}
-      transition={{
-        ease: 'easeInOut',
-        duration: 0.7,
-        delay: 0.15,
-      }}
+    <motion.article
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+      className={featured ? 'md:col-span-2' : ''}
     >
-      <Link to={`/projects/single-project?title=${title}`} aria-label="Single Project">
-        <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
-          <div>
+      <Link
+        to={`/projects/${project.slug}`}
+        className="project-card card-surface group block h-full"
+        aria-label={`${project.title} case study`}
+      >
+        <div className={`overflow-hidden ${featured ? 'aspect-[16/8]' : 'aspect-[16/10]'}`}>
+          {project.img ? (
             <img
-              src={image}
-              className="rounded-t-xl border-none"
-              alt="Single Project"
+              src={project.img}
+              alt={project.title}
+              className="h-full w-full object-cover object-top"
+              loading="lazy"
             />
-          </div>
-          <div className="text-center px-4 py-6">
-            <p className="font-general-medium text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-2">
-              {title}
+          ) : (
+            <ProjectCover cover={project.cover} title={project.title} className="h-full" />
+          )}
+        </div>
+        <div className="p-5 sm:p-6">
+          <div className="flex items-center justify-between gap-3">
+            <p className="eyebrow">
+              {project.category} · {project.year}
             </p>
-            <span className="text-lg text-ternary-dark dark:text-ternary-light">
-              {category}
-            </span>
+            <FiArrowUpRight className="text-muted transition group-hover:text-accent" />
+          </div>
+          <h3 className="display mt-2 text-xl text-ink sm:text-2xl">{project.title}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{project.summary}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.tags.slice(0, featured ? 6 : 4).map((tag) => (
+              <span key={tag} className="chip">
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </Link>
-    </motion.div>
+    </motion.article>
   );
 };
 

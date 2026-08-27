@@ -1,102 +1,61 @@
-import React, { useContext, useMemo } from 'react';
-import SingleProjectContext from '../../context/SingleProjectContext';
-import { useSearchParams } from 'react-router-dom';
+const isLink = (item) => Boolean(item.href) || /^https?:\/\//.test(item.details);
 
-const ProjectInfo = () => {
-  const { singleProjectData } = useContext(SingleProjectContext);
-  const [searchParams] = useSearchParams();
-  const currentProject = useMemo(() => {
-    return searchParams.get('title');
-  }, [searchParams]);
-
-  const modifiedProjectData = useMemo(() => {
-    return (
-      singleProjectData?.filter(
-        (item) => item?.ProjectHeader?.mainTitle === currentProject
-      ) || []
-    );
-  }, [singleProjectData, currentProject]);
-
-  return modifiedProjectData?.map((project) => (
-    <div className="block sm:flex gap-0 sm:gap-10 mt-14">
-      <div className="w-full sm:w-1/3 text-left">
-        {/* Single project client details */}
-        <div className="mb-7">
-          <p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
-            {project.ProjectInfo.ClientHeading}
-          </p>
-          <ul className="leading-loose">
-            {project.ProjectInfo.CompanyInfo.map((info) => {
-              return (
-                <li
-                  className="font-general-regular text-ternary-dark dark:text-ternary-light"
-                  key={info.id}
-                >
-                  <span>{info.title}: </span>
+const ProjectInfo = ({ project }) => {
+  return (
+    <div className="mt-12 grid gap-12 lg:grid-cols-12">
+      <aside className="space-y-10 lg:col-span-4">
+        <div>
+          <p className="eyebrow">{project.companyHeading}</p>
+          <ul className="mt-4 space-y-3 text-sm">
+            {project.company.map((info) => (
+              <li key={info.id} className="flex flex-col">
+                <span className="text-muted">{info.title}</span>
+                {isLink(info) ? (
                   <a
-                    href={info.details}
+                    href={info.href || info.details}
                     target="_blank"
-                    className={
-                      info.title === 'Website' || info.title === 'Phone'
-                        ? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-                        : ''
-                    }
-                    aria-label="Project Website and Phone"
+                    rel="noreferrer"
+                    className="text-ink hover:text-accent"
                   >
                     {info.details}
                   </a>
-                </li>
-              );
-            })}
+                ) : (
+                  <span>{info.details}</span>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Single project objectives */}
-        <div className="mb-7">
-          <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-            {project.ProjectInfo.ObjectivesHeading}
-          </p>
-          <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-            {project.ProjectInfo.ObjectivesDetails}
-          </p>
-        </div>
-
-        {/* Single project technologies */}
-        <div className="mb-7">
-          <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-            {project.ProjectInfo.Technologies[0].title}
-          </p>
-          <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-            {project.ProjectInfo.Technologies[0].techs.join(', ')}
-          </p>
-        </div>
-
-        {/* Single project social sharing */}
         <div>
-          <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-            {project.ProjectInfo.SocialSharingHeading}
-          </p>
+          <p className="eyebrow">Objective</p>
+          <p className="mt-4 text-sm leading-relaxed text-muted">{project.objective}</p>
         </div>
-      </div>
 
-      {/*  Single project right section */}
-      <div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-        <p className="font-general-regular text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
-          {project.ProjectInfo.ProjectDetailsHeading}
-        </p>
-        {project.ProjectInfo.ProjectDetails.map((details) => {
-          return (
-            <p
-              key={details.id}
-              className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
-            >
-              {details.details}
+        <div>
+          <p className="eyebrow">Stack</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.techs.map((tech) => (
+              <span key={tech} className="chip">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </aside>
+
+      <div className="lg:col-span-8">
+        <p className="eyebrow">{project.detailsHeading}</p>
+        <div className="mt-6 space-y-5">
+          {project.details.map((detail) => (
+            <p key={detail} className="text-base leading-relaxed text-ink/85">
+              {detail}
             </p>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </div>
-  ));
+  );
 };
 
 export default ProjectInfo;

@@ -1,45 +1,34 @@
-import { useState, createContext } from 'react';
+import { useState, createContext, useMemo } from 'react';
 import { projectsData } from '../data/projects';
 
-// Create projects context
 export const ProjectsContext = createContext();
 
-// Create the projects context provider
 export const ProjectsProvider = (props) => {
-  const [projects, setProjects] = useState(projectsData);
+  const [projects] = useState(projectsData);
   const [searchProject, setSearchProject] = useState('');
-  const [selectProject, setSelectProject] = useState('');
+  const [selectProject, setSelectProject] = useState('All');
 
-  // Search projects by project title
-  const searchProjectsByTitle = projects.filter((item) => {
-    const result = item.title
-      .toLowerCase()
-      .includes(searchProject.toLowerCase())
-      ? item
-      : searchProject === ''
-        ? item
-        : '';
-    return result;
-  });
+  const filteredProjects = useMemo(() => {
+    const query = searchProject.trim().toLowerCase();
 
-  // Select projects by project category
-  const selectProjectsByCategory = projects.filter((item) => {
-    let category =
-      item.category.charAt(0).toUpperCase() + item.category.slice(1);
-    return category.includes(selectProject);
-  });
+    return projects.filter((item) => {
+      const matchesCategory =
+        selectProject === 'All' || item.category === selectProject;
+      const haystack = `${item.title} ${item.summary} ${item.tags.join(' ')}`.toLowerCase();
+      const matchesQuery = !query || haystack.includes(query);
+      return matchesCategory && matchesQuery;
+    });
+  }, [projects, searchProject, selectProject]);
 
   return (
     <ProjectsContext.Provider
       value={{
         projects,
-        setProjects,
         searchProject,
         setSearchProject,
-        searchProjectsByTitle,
         selectProject,
         setSelectProject,
-        selectProjectsByCategory,
+        filteredProjects,
       }}
     >
       {props.children}

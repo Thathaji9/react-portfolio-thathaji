@@ -1,54 +1,79 @@
-import {
-  FiGithub,
-  FiLinkedin,
-  FiGlobe,
-} from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiGlobe } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import AppFooterCopyright from './AppFooterCopyright';
+import { site } from '../../data/site';
 
-const socialLinks = [
-  {
-    id: 2,
-    icon: <FiGithub />,
-    url: 'https://github.com/Thathaji9',
-  },
-  {
-    id: 4,
-    icon: <FiLinkedin />,
-    url: 'https://www.linkedin.com/in/thathaji-r-2b78ba1a3/',
-  },
-  {
-    id: 1,
-    icon: <FiGlobe />,
-    url: 'https://hashnode.com/@thathaji9',
-  },
-];
+const iconMap = {
+  github: <FiGithub />,
+  linkedin: <FiLinkedin />,
+  hashnode: <FiGlobe />,
+};
 
 const AppFooter = () => {
   return (
-    <div className="container mx-auto">
-      <div className="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-primary-light dark:border-secondary-dark">
-        {/* Footer social links */}
-        <div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
-          <p className="text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-5">
-            Follow me
-          </p>
-          <ul className="flex gap-4 sm:gap-8">
-            {socialLinks.map((link) => (
+    <footer className="mt-24 border-t border-line/10">
+      <div className="site-wrap grid gap-10 py-16 md:grid-cols-12">
+        <div className="md:col-span-6">
+          <p className="eyebrow">Let’s build</p>
+          <h2 className="display mt-3 max-w-md text-3xl text-ink sm:text-4xl">
+            Have a product that needs a sharper interface?
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link to="/contact" className="btn-primary">
+              Start a conversation
+            </Link>
+            <a href={`mailto:${site.email}`} className="btn-ghost">
+              {site.email}
+            </a>
+          </div>
+        </div>
+        <div className="md:col-span-3">
+          <p className="eyebrow">Navigate</p>
+          <ul className="mt-4 space-y-2 text-sm text-muted">
+            <li>
+              <Link to="/projects" className="hover:text-accent">
+                Work
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-accent">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/#writing" className="hover:text-accent">
+                Notes
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-accent">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="md:col-span-3">
+          <p className="eyebrow">Elsewhere</p>
+          <ul className="mt-4 flex gap-3">
+            {site.socials.map((link) => (
               <a
-                href={link.url}
-                target="__blank"
                 key={link.id}
-                className="text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm p-4 duration-300"
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={link.label}
+                className="grid h-11 w-11 place-items-center rounded-2xl border border-line/10 bg-elevated text-lg text-ink transition hover:border-accent hover:text-accent"
               >
-                <i className="text-xl sm:text-2xl md:text-3xl">{link.icon}</i>
+                {iconMap[link.id]}
               </a>
             ))}
           </ul>
         </div>
-
+      </div>
+      <div className="border-t border-line/10 py-6">
         <AppFooterCopyright />
       </div>
-    </div>
+    </footer>
   );
 };
 

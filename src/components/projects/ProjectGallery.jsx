@@ -1,38 +1,32 @@
-import React, { useContext, useMemo } from 'react';
-import SingleProjectContext from '../../context/SingleProjectContext';
-import { useSearchParams } from 'react-router-dom';
+import ProjectCover from './ProjectCover';
 
-const ProjectGallery = () => {
-  const { singleProjectData } = useContext(SingleProjectContext);
-  const [searchParams] = useSearchParams();
-  const currentProject = useMemo(() => {
-    return searchParams.get('title');
-  }, [searchParams]);
-
-  const modifiedProjectData = useMemo(() => {
+const ProjectGallery = ({ project }) => {
+  if (!project.images?.length) {
     return (
-      singleProjectData?.filter(
-        (item) => item?.ProjectHeader?.mainTitle === currentProject
-      ) || []
+      <div className="mt-10 overflow-hidden rounded-3xl border border-line/10">
+        <ProjectCover cover={project.cover} title={project.title} className="min-h-[320px]" />
+      </div>
     );
-  }, [singleProjectData, currentProject]);
+  }
 
-  return modifiedProjectData?.map((project) => (
-    <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-      {project.ProjectImages.map((project) => {
-        return (
-          <div className="mb-10 sm:mb-0" key={project.id}>
-            <img
-              src={project.img}
-              className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
-              alt={project.title}
-              key={project.id}
-            />
-          </div>
-        );
-      })}
+  const [hero, ...rest] = project.images;
+
+  return (
+    <div className="mt-10 grid gap-4">
+      <div className="overflow-hidden rounded-3xl border border-line/10">
+        <img src={hero.img} alt={hero.title} className="w-full object-cover" />
+      </div>
+      {rest.length > 0 && (
+        <div className="grid gap-4 sm:grid-cols-2">
+          {rest.map((image) => (
+            <div key={image.id} className="overflow-hidden rounded-3xl border border-line/10">
+              <img src={image.img} alt={image.title} className="w-full object-cover" />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-  ));
+  );
 };
 
 export default ProjectGallery;
