@@ -1,7 +1,7 @@
 export const aboutMeData = [
   {
     id: 1,
-    bio: `I'm Thathaji Rallapalli, a frontend engineer with 3+ years building production interfaces for security, data, and AI-assisted products. I care about the unglamorous parts that make software feel inevitable: typed contracts, reusable primitives, and UI that still holds up when the dataset is huge.`,
+    bio: `I'm Thathaji Rallapalli, a frontend engineer with 4+ years building production interfaces for security, data, and AI-assisted products. I care about the unglamorous parts that make software feel inevitable: typed contracts, reusable primitives, and UI that still holds up when the dataset is huge.`,
   },
   {
     id: 2,
