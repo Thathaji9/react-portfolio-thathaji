@@ -1,10 +1,14 @@
+import { site } from '../../data/site';
+
 function AppFooterCopyright() {
   return (
-    <div className="font-general-regular flex justify-center items-center text-center">
-      <div className="text-lg text-ternary-dark dark:text-ternary-light">
-        Designed & built with ❤️ by <strong>Thathaji Rallapalli</strong> ©{' '}
-        {new Date().getFullYear()}
-      </div>
+    <div className="site-wrap flex flex-col items-center justify-between gap-3 text-center text-sm text-muted sm:flex-row sm:text-left">
+      <p>
+        © {new Date().getFullYear()} {site.name}. Designed and built in the browser.
+      </p>
+      <p className="font-mono text-[11px] uppercase tracking-[0.18em]">
+        React · Tailwind · Framer Motion
+      </p>
     </div>
   );
 }

@@ -5,12 +5,7 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
     <AboutMeProvider>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, delay: 1 }}
-        exit={{ opacity: 0 }}
-        className="container mx-auto"
-      >
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="site-wrap">
         <AboutMeBio />
       </motion.div>
     </AboutMeProvider>

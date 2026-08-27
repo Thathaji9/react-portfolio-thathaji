@@ -1,44 +1,26 @@
-import React from "react";
+import { projectCategories } from '../../data/projects';
 
-const selectOptions = [
-  'Web Application',
-  'Mobile Application',
-  'UI/UX Design',
-  'Branding',
-];
-
-const ProjectsFilter = ({ setSelectProject }) => {
+const ProjectsFilter = ({ selectProject, setSelectProject }) => {
   return (
-    <select
-      onChange={(e) => {
-        setSelectProject(e.target.value);
-      }}
-      className="font-general-medium 
-                px-4
-                sm:px-6
-                py-2
-                border
-                dark:border-secondary-dark
-                rounded-lg
-                text-sm
-                sm:text-md
-                dark:font-medium
-                bg-secondary-light
-                dark:bg-ternary-dark
-                text-primary-dark
-                dark:text-ternary-light
-            "
-    >
-      <option value={setSelectProject} className="text-sm sm:text-md">
-        All Projects
-      </option>
-
-      {selectOptions.map((option) => (
-        <option className="text-normal sm:text-md" key={option}>
-          {option}
-        </option>
-      ))}
-    </select>
+    <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter projects">
+      {projectCategories.map((option) => {
+        const active = selectProject === option;
+        return (
+          <button
+            key={option}
+            type="button"
+            onClick={() => setSelectProject(option)}
+            className={`rounded-full px-3 py-1.5 text-xs transition ${
+              active
+                ? 'bg-ink text-paper dark:bg-accent dark:text-[#062421]'
+                : 'border border-line/10 text-muted hover:text-ink'
+            }`}
+          >
+            {option}
+          </button>
+        );
+      })}
+    </div>
   );
 };
 

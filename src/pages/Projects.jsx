@@ -4,7 +4,7 @@ import { ProjectsProvider } from '../context/ProjectsContext';
 const Projects = () => {
   return (
     <ProjectsProvider>
-      <div className="container mx-auto">
+      <div className="site-wrap">
         <ProjectsGrid />
       </div>
     </ProjectsProvider>

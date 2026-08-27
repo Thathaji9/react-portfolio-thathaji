@@ -1,248 +1,176 @@
-/*== 
- * React & TailwindCSS Portfolio Main CSS File
- * Powered by: @thathaji
-*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  font-family: 'GeneralSans-Variable';
+:root {
+  --paper: 247 243 234;
+  --ink: 22 18 14;
+  --muted: 92 82 70;
+  --elevated: 255 252 246;
+  --line: 28 22 16;
+  --accent: 13 115 108;
+  --ember: 194 84 32;
+  --glow: 13 115 108;
 }
 
-/* Fonts */
-@font-face {
-  font-family: 'GeneralSans-Variable';
-  src:
-    url('../fonts/GeneralSans-Variable.woff2') format('woff2'),
-    url('../fonts/GeneralSans-Variable.woff') format('woff'),
-    url('../fonts/GeneralSans-Variable.ttf') format('truetype');
-  font-weight: 200 700;
-  font-display: swap;
-  font-style: normal;
+.dark {
+  --paper: 8 9 12;
+  --ink: 244 238 228;
+  --muted: 154 161 173;
+  --elevated: 16 19 26;
+  --line: 232 224 210;
+  --accent: 62 224 196;
+  --ember: 245 158 90;
+  --glow: 62 224 196;
 }
 
-.font-general-variable {
-  font-family: 'GeneralSans-Variable';
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@font-face {
-  font-family: 'GeneralSans-VariableItalic';
-  src:
-    url('../fonts/GeneralSans-VariableItalic.woff2') format('woff2'),
-    url('../fonts/GeneralSans-VariableItalic.woff') format('woff'),
-    url('../fonts/GeneralSans-VariableItalic.ttf') format('truetype');
-  font-weight: 200 700;
-  font-display: swap;
-  font-style: italic;
-}
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 12% -10%, rgb(var(--glow) / 0.16), transparent 55%),
+      radial-gradient(900px 500px at 100% 0%, rgb(var(--ember) / 0.12), transparent 50%);
+    min-height: 100vh;
+  }
 
-.font-general-variable-italic {
-  font-family: 'GeneralSans-VariableItalic';
-}
-
-@font-face {
-  font-family: 'GeneralSans-Extralight';
-  src:
-    url('../fonts/GeneralSans-Extralight.woff2') format('woff2'),
-    url('../fonts/GeneralSans-Extralight.woff') format('woff'),
-    url('../fonts/GeneralSans-Extralight.ttf') format('truetype');
-  font-weight: 200;
-  font-display: swap;
-  font-style: normal;
-}
-
-.font-general-extralight {
-  font-family: 'GeneralSans-Extralight';
-}
-
-@font-face {
-  font-family: 'GeneralSans-ExtralightItalic';
-  src:
-    url('../fonts/GeneralSans-ExtralightItalic.woff2') format('woff2'),
-    url('../fonts/GeneralSans-ExtralightItalic.woff') format('woff'),
-    url('../fonts/GeneralSans-ExtralightItalic.ttf') format('truetype');
-  font-weight: 200;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-general-extralight-italic {
-  font-family: 'GeneralSans-ExtralightItalic';
-}
-
-@font-face {
-  font-family: 'GeneralSans-Light';
-  src:
-    url('../fonts/GeneralSans-Light.woff2') format('woff2'),
-    url('../fonts/GeneralSans-Light.woff') format('woff'),
-    url('../fonts/GeneralSans-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
-}
-
-.font-general-light {
-  font-family: 'GeneralSans-Light';
-}
-
-@font-face {
-  font-family: 'GeneralSans-LightItalic';
-  src:
-    url('../fonts/GeneralSans-LightItalic.woff2') format('woff2'),
-    url('../fonts/GeneralSans-LightItalic.woff') format('woff'),
-    url('../fonts/GeneralSans-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-general-light-italic {
-  font-family: 'GeneralSans-LightItalic';
+  ::selection {
+    background: rgb(var(--accent) / 0.28);
+  }
 }
 
 @font-face {
   font-family: 'GeneralSans-Regular';
   src:
     url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
-    url('../fonts/GeneralSans-Regular.woff') format('woff'),
-    url('../fonts/GeneralSans-Regular.ttf') format('truetype');
+    url('../fonts/GeneralSans-Regular.woff') format('woff');
   font-weight: 400;
   font-display: swap;
-  font-style: normal;
-}
-
-.font-general-regular {
-  font-family: 'GeneralSans-Regular';
-}
-
-@font-face {
-  font-family: 'GeneralSans-Italic';
-  src:
-    url('../fonts/GeneralSans-Italic.woff2') format('woff2'),
-    url('../fonts/GeneralSans-Italic.woff') format('woff'),
-    url('../fonts/GeneralSans-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-general-italic {
-  font-family: 'GeneralSans-Italic';
-}
-
-@font-face {
-  font-family: 'GeneralSans-Medium';
-  src:
-    url('../fonts/GeneralSans-Medium.woff2') format('woff2'),
-    url('../fonts/GeneralSans-Medium.woff') format('woff'),
-    url('../fonts/GeneralSans-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-
-.font-general-medium {
-  font-family: 'GeneralSans-Medium';
-}
-
-@font-face {
-  font-family: 'GeneralSans-MediumItalic';
-  src:
-    url('../fonts/GeneralSans-MediumItalic.woff2') format('woff2'),
-    url('../fonts/GeneralSans-MediumItalic.woff') format('woff'),
-    url('../fonts/GeneralSans-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-general-medium-italic {
-  font-family: 'GeneralSans-MediumItalic';
 }
 
 @font-face {
   font-family: 'GeneralSans-Semibold';
   src:
     url('../fonts/GeneralSans-Semibold.woff2') format('woff2'),
-    url('../fonts/GeneralSans-Semibold.woff') format('woff'),
-    url('../fonts/GeneralSans-Semibold.ttf') format('truetype');
+    url('../fonts/GeneralSans-Semibold.woff') format('woff');
   font-weight: 600;
   font-display: swap;
-  font-style: normal;
 }
 
-.font-general-semibold {
-  font-family: 'GeneralSans-Semibold';
-}
-
-@font-face {
-  font-family: 'GeneralSans-SemiboldItalic';
-  src:
-    url('../fonts/GeneralSans-SemiboldItalic.woff2') format('woff2'),
-    url('../fonts/GeneralSans-SemiboldItalic.woff') format('woff'),
-    url('../fonts/GeneralSans-SemiboldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-general-semibold-italic {
-  font-family: 'GeneralSans-SemiboldItalic';
-}
-
-@font-face {
-  font-family: 'GeneralSans-Bold';
-  src:
-    url('../fonts/GeneralSans-Bold.woff2') format('woff2'),
-    url('../fonts/GeneralSans-Bold.woff') format('woff'),
-    url('../fonts/GeneralSans-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-
-.font-general-bold {
-  font-family: 'GeneralSans-Bold';
-}
-
-@font-face {
-  font-family: 'GeneralSans-BoldItalic';
-  src:
-    url('../fonts/GeneralSans-BoldItalic.woff2') format('woff2'),
-    url('../fonts/GeneralSans-BoldItalic.woff') format('woff'),
-    url('../fonts/GeneralSans-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-general-bold-italic {
-  font-family: 'GeneralSans-BoldItalic';
-}
-
-/* Scroll to top style */
-.scrollToTop {
-  @apply bg-indigo-600;
-  @apply text-white;
+.page-grain::before {
+  content: '';
+  pointer-events: none;
   position: fixed;
-  width: 100%;
-  align-items: center;
-  height: 20px;
-  justify-content: center;
-  z-index: 999;
+  inset: 0;
+  z-index: 40;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+.dark .page-grain::before {
+  opacity: 0.22;
+  mix-blend-mode: soft-light;
+}
+
+.site-wrap {
+  @apply relative mx-auto w-full max-w-site px-5 sm:px-8;
+}
+
+.nav-glass {
+  backdrop-filter: blur(18px);
+  background: rgb(var(--paper) / 0.72);
+  border-bottom: 1px solid rgb(var(--line) / 0.08);
+}
+
+.eyebrow {
+  @apply font-mono text-[11px] uppercase tracking-[0.22em] text-muted;
+}
+
+.display {
+  @apply font-display font-semibold tracking-tight;
+}
+
+.chip {
+  @apply inline-flex items-center rounded-full border border-line/10 bg-elevated/80 px-3 py-1 text-xs text-muted;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper transition hover:opacity-90;
+}
+
+.dark .btn-primary {
+  @apply bg-accent text-paper;
+  color: #062421;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-line/15 bg-transparent px-5 py-3 text-sm font-medium text-ink transition hover:border-accent hover:text-accent;
+}
+
+.card-surface {
+  @apply overflow-hidden rounded-3xl border border-line/10 bg-elevated/70;
+  box-shadow: 0 1px 0 rgb(var(--line) / 0.04);
+}
+
+.project-card img,
+.project-card .generated-cover {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover img,
+.project-card:hover .generated-cover {
+  transform: scale(1.05);
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.scrollToTop {
+  @apply fixed z-50 flex items-center justify-center rounded-full border border-line/15 bg-elevated text-ink shadow-lift;
+  width: 44px;
+  height: 44px;
+  right: 22px;
+  bottom: 22px;
   cursor: pointer;
-  animation: fadeIn 0.3s;
-  transition: opacity 0.4s;
-  opacity: 0.9;
 }
 
-.scrollToTop:hover {
-  opacity: 1;
+.hero-grid {
+  background-image:
+    linear-gradient(rgb(var(--line) / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--line) / 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+.loader-orbit {
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgb(var(--line) / 0.15);
+  border-top-color: rgb(var(--accent));
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
-  100% {
-    opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
