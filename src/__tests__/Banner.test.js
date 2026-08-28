@@ -22,6 +22,7 @@ test('it shows the title in the banner', () => {
   expect(
     screen.getByText(/I turn complex systems into interfaces people can actually use/i)
   ).toBeInTheDocument();
+  expect(screen.getByText('4+')).toBeInTheDocument();
 });
 
 test('can download cv when clicked on download cv button', async () => {

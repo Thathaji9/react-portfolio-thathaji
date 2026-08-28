@@ -15,6 +15,7 @@ Live: [https://portfolio-thathaji.vercel.app/](https://portfolio-thathaji.vercel
 
 ### Featured work
 
+- **Grade A IT Desk** — SEBI Officer Grade A (IT) study desk: syllabus, notes, timed mocks
 - **CheckRed Security Platform** — schema-driven DNS Posture & Inventory UI
 - **InsightFlow AI** — LLM-assisted dashboard storytelling
 - **Custom Report Service** — React + Node reporting, PDF, and scheduling

@@ -21,7 +21,7 @@ export const skillGroups = [
   {
     id: 'design',
     title: 'Design systems',
-    items: ['Material UI', 'Tailwind CSS', 'Framer Motion', 'Responsive layout', 'Accessibility'],
+    items: ['Material UI', 'shadcn/ui', 'Tailwind CSS', 'Framer Motion', 'Responsive layout', 'Accessibility'],
   },
   {
     id: 'viz',

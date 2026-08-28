@@ -11,7 +11,7 @@ export const site = {
   phone: '+91 7659025931',
   phoneHref: 'tel:+917659025931',
   resume: '/files/Thathaji_Rallapalli.pdf',
-  years: '3+',
+  years: '4+',
   socials: [
     { id: 'github', label: 'GitHub', url: 'https://github.com/Thathaji9' },
     {

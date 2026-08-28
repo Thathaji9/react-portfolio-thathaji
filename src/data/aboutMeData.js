@@ -9,6 +9,6 @@ export const aboutMeData = [
   },
   {
     id: 3,
-    bio: `Around the day job I run a personal lab of dashboards, custom charts, reporting engines, and AI storytelling tools. I write about the patterns I actually use — metadata-based UI, OTP autofill, and the craft of making complex products feel simple.`,
+    bio: `Around the day job I run a personal lab of dashboards, custom charts, reporting engines, AI storytelling tools, and Grade A IT Desk — a SEBI Officer Grade A (IT) study product with timed mocks and local-only progress. I write about the patterns I actually use — metadata-based UI, OTP autofill, and the craft of making complex products feel simple.`,
   },
 ];
