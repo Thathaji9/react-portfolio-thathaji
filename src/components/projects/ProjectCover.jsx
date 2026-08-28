@@ -9,6 +9,11 @@ const tones = {
     to: '#d97757',
     accent: '#ffd6a8',
   },
+  ledger: {
+    from: '#0c1f3d',
+    to: '#1a6b54',
+    accent: '#e8c872',
+  },
 };
 
 const ProjectCover = ({ cover, title, className = '' }) => {

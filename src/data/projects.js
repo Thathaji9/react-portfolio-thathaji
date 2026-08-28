@@ -20,11 +20,60 @@ export const projectCategories = [
   'AI',
   'Full Stack',
   'Visualization',
+  'Education',
   'Components',
   'Personal',
 ];
 
 export const projectsData = [
+  {
+    id: 9,
+    slug: 'sebi-grade-a-it-desk',
+    title: 'Grade A IT Desk',
+    category: 'Education',
+    featured: true,
+    year: '2026',
+    img: null,
+    cover: {
+      eyebrow: 'SEBI Grade A · IT stream',
+      title: 'Grade A IT Desk',
+      subtitle: 'Syllabus, notes, MCQs, timed mocks',
+      tone: 'ledger',
+    },
+    images: [],
+    liveUrl: 'https://sebi-it-study-guide.vercel.app',
+    repoUrl: 'https://github.com/Thathaji9/sebi-it-study-guide',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'LocalStorage'],
+    summary:
+      'A browser study desk for SEBI Officer Grade A (IT): official-weightage syllabus, high-yield notes, topic MCQs, and timed papers that stay on the device.',
+    objective:
+      'Turn the 2025 SEBI Grade A IT annexure into a working desk — Phase I Paper 2 weights, Phase II coding-logic MCQs, official-style cut-offs, and negative marking — without sending progress to a server.',
+    companyHeading: 'Project',
+    company: [
+      {
+        id: 1,
+        title: 'Repository',
+        details: 'github.com/Thathaji9/sebi-it-study-guide',
+        href: 'https://github.com/Thathaji9/sebi-it-study-guide',
+      },
+      {
+        id: 2,
+        title: 'Live demo',
+        details: 'sebi-it-study-guide.vercel.app',
+        href: 'https://sebi-it-study-guide.vercel.app',
+      },
+      { id: 3, title: 'Type', details: 'Personal study product — not an official SEBI tool' },
+    ],
+    techs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'LocalStorage'],
+    detailsHeading: 'What it does',
+    details: [
+      'Mapped the IT annexure into a syllabus surface for Phase I Paper 2, Phase II Paper 2 (DSA / strings / OOP), and Paper 1 screening topics, with indicative weightages.',
+      'Wrote high-yield revision notes (normal forms, OSI ports, CIA, ETL, shell specials, OOP pillars) so the desk is useful between mocks, not only during them.',
+      'Built topic practice with immediate explanations, including Java / C++ / Python dry-runs that match the Phase II coding-logic paper.',
+      'Shipped timed mocks with official-style rules: Phase I Paper 2 (50 Q, 40 min, −0.5), Paper 1 mini (20 Q, 15 min), and Phase II Paper 2 (25 dry-run MCQs, 45 min).',
+      'Added a review screen for score vs cut-off, topic split, and a full answer key, plus wrong-question revision persisted in localStorage so nothing leaves the browser.',
+    ],
+  },
   {
     id: 1,
     slug: 'checkred-security-platform',

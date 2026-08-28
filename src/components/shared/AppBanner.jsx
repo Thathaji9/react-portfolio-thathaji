@@ -3,6 +3,7 @@ import { FiArrowDownRight, FiArrowUpRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { site } from '../../data/site';
+import { projectsData } from '../../data/projects';
 
 const AppBanner = () => {
   const [index, setIndex] = useState(0);
@@ -58,7 +59,9 @@ const AppBanner = () => {
             </div>
             <div>
               <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">Projects</dt>
-              <dd className="display mt-1 text-2xl text-ink">08</dd>
+              <dd className="display mt-1 text-2xl text-ink">
+                {String(projectsData.length).padStart(2, '0')}
+              </dd>
             </div>
             <div>
               <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">Essays</dt>
