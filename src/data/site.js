@@ -6,7 +6,7 @@ export const site = {
   subhead:
     'Currently at Clearwater, building Angular UI in an Nx monorepo — plus a body of React work in schema-driven dashboards, visualization, and AI-assisted products.',
   availability: 'Software Engineer, UI at Clearwater · Dec 2025 — Present',
-  location: 'Pune, Maharashtra, India',
+  location: 'Hyderabad, Telangana, India',
   email: 'thathaji.rallapalli9@gmail.com',
   phone: '+91 7659025931',
   phoneHref: 'tel:+917659025931',
